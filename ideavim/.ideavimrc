@@ -1,0 +1,78 @@
+""" Map leader to space
+let mapleader=" "
+
+"""Plugins
+set commentary
+set easymotion
+set NERDTree
+set surround
+
+set which-key
+set notimeout
+
+""" Common settings
+set showmode
+set so=5
+set incsearch
+set ignorecase
+set nu
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+set ideajoin
+
+""" Mappings
+inoremap kj <Esc>
+cnoremap kj <Esc>
+nnoremap Z :w <CR>
+let g:WhichKeyDesc_FindOrFormat = "<leader>f FindOrFormat"
+let g:WhichKeyDesc_FindOrFormat_Find = "<leader>ff FindOrFormat"
+nmap <leader>ff <action>(SearchEverywhere)
+
+let g:WhichKeyDesc_NERDTree_Toggle = "<leader>n Toggle NERDTree"
+nmap <leader>n :NERDTreeToggle<CR>
+
+let g:WhichKeyDesc_Terminal_Toggle = "<leader>t Toggle Terminal"
+nmap <leader>t <action>(ActivateTerminalToolWindow)
+
+let g:WhichKeyDesc_Auto_Indent = "<leader>i Auto Indent"
+vmap <leader>i <action>(AutoIndentLines)
+
+nmap <C-l> <action>(NextTab)
+nmap <C-h> <action>(PreviousTab)
+
+let g:WhichKeyDesc_Refactor = "<leader>r Refactor"
+vmap <leader>r <action>(RefactoringMenu)
+
+let g:WhichKeyDesc_Window = "<leader>w Window"
+let g:WhichKeyDesc_Close_Tab = "<leader>wc Close Tab"
+nmap <leader>wc <action>(CloseContent)
+let g:WhichKeyDesc_Split_Horizontal = "<leader>wh Split Horizontal"
+nmap <leader>wh <action>(SplitHorizontally)
+let g:WhichKeyDesc_Split_Vertical = "<leader>wv Split Vertical"
+nmap <leader>wv <action>(SplitVertically)
+let g:WhichKeyDesc_Distraction_Free = "<leader>wd Distraction Free"
+nmap <leader>wd <action>(ToggleDistractionFreeMode)
+
+let g:WhichKeyDesc_Git = "<leader>g Git"
+let g:WhichKeyDesc_Git_Window = "<leader>gg Git Window"
+nmap <leader>gg <action>(ActivateVersionControlToolWindow)
+let g:WhichKeyDesc_Git_Menu = "<leader>gm Git Menu"
+nmap <leader>gm <action>(Git.Menu)
+
+
+let g:WhichKeyDesc_LSP = "<leader>l LSP Menu"
+let g:WhichKeyDesc_LSP_Generate = "<leader>lg Generate"
+nmap <leader>lg <action>(Generate)
+let g:WhichKeyDesc_LSP_Next_Error = "<leader>lj Go To Next Error"
+nmap <leader>lj <action>(GoToNextError)
+let g:WhichKeyDesc_LSP_Previous_Error = "<leader>lk Go To Previous Error"
+nmap <leader>lk <action>(GoToPreviousError)
+let g:WhichKeyDesc_Show_Error_Description = "<leader>ld Show Error Description"
+nmap <leader>ld <action>(ShowErrorDescription)
+let g:WhichKeyDesc_Optimize_Imports = "<leader>lo Optimize Imports"
+nmap <leader>lo <action>(OptimizeImports)
+let g:WhichKeyDesc_Reformat_Code = "<leader>lf Reformat Code"
+nmap <leader>lf <action>(ReformatCode)
+let g:WhichKeyDesc_Refactoring_Menu = "<leader>lr Refactoring Menu"
+nmap <leader>lr <action>(RefactoringMenu)
