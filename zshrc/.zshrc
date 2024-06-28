@@ -93,5 +93,8 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Aliases
 alias lg=lazygit
 
+alias ta="tmux attach"
+alias tl="tmux ls"
+
 # Starship Prompt
 eval "$(starship init zsh)"
