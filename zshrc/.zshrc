@@ -96,5 +96,8 @@ alias lg=lazygit
 alias ta="tmux attach"
 alias tl="tmux ls"
 
+# vi Mode
+bindkey -v
+
 # Starship Prompt
 eval "$(starship init zsh)"
