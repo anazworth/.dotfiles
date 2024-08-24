@@ -1,0 +1,58 @@
+let mapleader=" "
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set which-key
+set clipboard+=unnamed
+Plug 'preservim/nerdtree'
+
+nmap <Leader>ff <action>(GotoFile)
+nnoremap <Leader>fg :action Find<CR>
+nnoremap <Leader>sw :action SurroundWith<CR>
+nmap L <action>(NextTab)
+nmap H <action>(PreviousTab)
+
+nmap <Leader>e :NERDTreeToggle<CR>
+
+imap kj <Esc>
+
+nmap <C-/> <action>(ActivateTerminalToolWindow)
+
+imap <C-y> <action>(EditorChooseLookupItem)
+
+" Close active tab
+map <leader>bd <action>(CloseContent)
+
+" View Modes
+map <leader>vd <action>(ToggleDistractionFreeMode)
+map <leader>vz <action>(ToggleZenMode)
+map <leader>vf <action>(ToggleFullScreen)
+
+" Code Actions
+map <leader>ca <action>(ShowIntentionActions)
+map <leader>cn <action>(SearchEverywhere)
+
+" Refactoring
+map <leader>rn <action>(RenameElement)
+map <leader>rm <action>(ExtractMethod)
+map <leader>rv <action>(IntroduceVariable)
+map <leader>rf <action>(IntroduceField)
+map <leader>rs <action>(ChangeSignature)
+map <leader>rr <action>(Refactorings.QuickListPopupAction)
+
+" Tests
+nmap <leader>tn <action>(RunClass)
+map <leader>tr <action>(Run)
+map <leader>tc <action>(RunConfiguration)
+map <leader>ts <action>(Stop)
+
+" Go to code
+nmap <leader>gd <action>(GotoDeclaration)
+nmap <leader>gy <action>(GotoTypeDeclaration)
+nmap <leader>gi <action>(GotoImplementation)
+nmap <leader>gu <action>(ShowUsages)
+nmap <leader>gt <action>(GotoTest)
+nmap <leader>gf <action>(Back)
+nmap <leader>gb <action>(Forward)
