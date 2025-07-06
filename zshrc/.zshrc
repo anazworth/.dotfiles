@@ -90,12 +90,6 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # asdf Path
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
-# Aliases
-alias lg=lazygit
-
-alias ta="tmux attach"
-alias tl="tmux ls"
-
 # vi Mode
 bindkey -v
 
@@ -105,3 +99,18 @@ eval "$(starship init zsh)"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+eval "$(~/.local/bin/mise activate zsh)"
+
+export DOCKER_HOST=unix:///Users/austinnazworth/.local/share/containers/podman/machine/podman.sock
+export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
+eval "$(atuin init zsh)"
+# BEGIN ANSIBLE ALIASES
+# Aliases
+alias lg='lazygit'
+alias ta='tmux attach'
+alias tl='tmux ls'
+# END ANSIBLE ALIASES
+# BEGIN ANSIBLE MANAGED BLOCK
+# vi Mode
+bindkey -v
+# END ANSIBLE MANAGED BLOCK
