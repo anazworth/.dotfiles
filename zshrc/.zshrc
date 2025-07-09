@@ -114,3 +114,4 @@ alias tl='tmux ls'
 # vi Mode
 bindkey -v
 # END ANSIBLE MANAGED BLOCK
+export DOCKER_HOST=unix:///$HOME/.local/share/containers/podman/machine/podman.sock
